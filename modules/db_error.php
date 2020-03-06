@@ -1,15 +1,8 @@
-<div class="wrapper wrapper-content animated fadeInRight">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="text-center m-t-lg">
-                <h1>
-                    INSPINIA Static Seed Project for BS4
-                </h1>
-                <small>
-                    It is an application skeleton for a typical web app. You can use it to quickly bootstrap your webapp projects and dev environment for these projects.
-                </small>
-            </div>
-        </div>
+<div class="middle-box text-center animated fadeInDown">
+    <h1 style="color:#ffffff;">Upss</h1>
+    <h3 class="font-bold" style="color:#ffffff;">Tenemos un problema técnico</h3>
+
+    <div class="error-desc" style="color:#ffffff;">
+        Error en la conexión a la base de datos<br/>
     </div>
 </div>
-
