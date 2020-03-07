@@ -4,29 +4,31 @@ require_once 'structure/header.php';
 
 
 if($dbConexion === true){
+    if(isset($_SESSION["USUARIO_ID"])){
 
+        require_once 'structure/menu_left.php';
+        require_once 'structure/menu_top.php';
 
-    require_once 'structure/menu_left.php';
-    require_once 'structure/menu_top.php';
-
-    if(isset($_GET['pag'])){
-        switch ($_GET['pag']) {
-            case 'usuarios':
-                include_once 'modules/usuarios.php';
-                break;
-            case 1:
-                echo "i es igual a 1";
-                break;
-            case 2:
-                echo "i es igual a 2";
-                break;
+        if(isset($_GET['pag'])){
+            switch ($_GET['pag']) {
+                case 'usuarios':
+                    include_once 'modules/usuarios.php';
+                    break;
+                case 1:
+                    echo "i es igual a 1";
+                    break;
+                case 2:
+                    echo "i es igual a 2";
+                    break;
+            }
+        }else{
+            require_once 'modules/home.php';
         }
+    
     }else{
-        require_once 'modules/home.php';
+       header("Location:login.php");
     }
-   
-    
-    
+        
 
 }else{
     require_once 'modules/db_error.php';
