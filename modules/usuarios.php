@@ -85,7 +85,7 @@
         <div class="ibox ">
 
                 <div class="ibox-title">
-                    <h5>Basic form <small>Simple login form example</small></h5>
+                    <h5>Lista de usuarios </h5>
                     
                 </div>
                 <div class="ibox-content">

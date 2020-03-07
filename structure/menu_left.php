@@ -15,6 +15,10 @@
             <li class="active">
                 <a href="index.php?pag=usuarios"><i class="fa fa-user"></i> <span class="nav-label">Usuarios</span></a>
             </li>
+            <li class="active">
+                <a href="index.php?pag=gestiones"><i class="fa fa-th-list"></i> <span class="nav-label">Gestiones</span></a>
+            </li>
+          
           
         </ul>
 

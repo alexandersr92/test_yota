@@ -14,6 +14,9 @@ if($dbConexion === true){
                 case 'usuarios':
                     include_once 'modules/usuarios.php';
                     break;
+                case 'gestiones':
+                    include_once 'modules/gestiones.php';
+                    break;
                 case 1:
                     echo "i es igual a 1";
                     break;
