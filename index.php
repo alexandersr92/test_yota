@@ -16,12 +16,13 @@ if($dbConexion === true){
                 case 'gestiones':
                     include_once 'modules/gestiones.php';
                     break;
-                case 1:
-                    echo "i es igual a 1";
+                case 'ticket':
+                    include_once 'modules/tickets.php';
                     break;
-                case 2:
-                    echo "i es igual a 2";
+                case 'listaticket':
+                    include_once 'modules/listaTickets.php';
                     break;
+
             }
         }else{
             require_once 'modules/home.php';

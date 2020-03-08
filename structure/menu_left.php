@@ -21,6 +21,9 @@
             <li class="active">
                 <a href="index.php?pag=gestiones"><i class="fa fa-th-list"></i> <span class="nav-label">Gestiones</span></a>
             </li>
+            <li class="active">
+                <a href="index.php?pag=listaticket"><i class="fa fa-ticket"></i> <span class="nav-label">Ticket</span></a>
+            </li>
           
           
         </ul>

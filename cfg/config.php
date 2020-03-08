@@ -29,6 +29,7 @@ if(isset($_POST["login"])){
                 $_SESSION["USUARIO"] = $row['usuario'];
                 $_SESSION["NOMBRE"] = $row['nombre'];
                 $_SESSION["APELLIDO"] = $row['apellido'];
+                $_SESSION["PERMISO"] = $row['permiso'];
                 header('Location: ../index.php');
     
             }else{
