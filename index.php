@@ -2,7 +2,6 @@
 require_once 'cfg/config.php';
 require_once 'structure/header.php';
 
-
 if($dbConexion === true){
     if(isset($_SESSION["USUARIO_ID"])){
 

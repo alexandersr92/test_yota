@@ -13,6 +13,9 @@
                 </div>
             </li>
             <li class="active">
+                <a href="index.php"><i class="fa fa-dashboard"></i> <span class="nav-label">Inicio</span></a>
+            </li>
+            <li class="active">
                 <a href="index.php?pag=usuarios"><i class="fa fa-user"></i> <span class="nav-label">Usuarios</span></a>
             </li>
             <li class="active">

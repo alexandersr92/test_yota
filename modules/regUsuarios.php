@@ -8,6 +8,7 @@ if(isset($_POST['guardar'])){
         $usuario = $_POST['usuario'];
         $Userclave = $_POST['clave'];
         $Userclave_v = $_POST['clave_v'];
+        $permiso = $_POST['permiso'];
         if($Userclave == $Userclave_v){
             $clave = password_hash($Userclave, PASSWORD_DEFAULT, array('cost' => 15));
         }else{
@@ -21,7 +22,7 @@ if(isset($_POST['guardar'])){
         
         if(mysqli_fetch_assoc($resultado) == 0){
 
-            $con = "INSERT INTO usuarios(usuario, clave, nombre, apellido) VALUES ('$usuario', '$clave', '$nombre', '$apellido')";
+            $con = "INSERT INTO usuarios(usuario, clave, nombre, apellido, permiso) VALUES ('$usuario', '$clave', '$nombre', '$apellido', $permiso)";
             var_dump($con);
             $res = mysqli_query($conexion, $con);
             
@@ -42,7 +43,7 @@ if(isset($_POST['guardar'])){
     if($_POST['nombre']!='' && $_POST['apellido']!='' &&$_POST['id']!='' ){
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
-     
+        $permiso = $_POST['permiso'];
         $Userclave = $_POST['clave'];
         $Userclave_v = $_POST['clave_v'];
         $id = $_POST['id'];
@@ -56,7 +57,7 @@ if(isset($_POST['guardar'])){
             }
             
         }else{
-            $con = "UPDATE usuarios SET nombre='$nombre', apellido='$apellido' where usuario_id=$id";
+            $con = "UPDATE usuarios SET nombre='$nombre', apellido='$apellido', permiso=$permiso where usuario_id=$id";
         }
         
         var_dump($con);

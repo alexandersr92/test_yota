@@ -66,11 +66,17 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <form role="form" method="POST" action="modules/regUsuarios.php">
-                                <div class="form-group"><label>Nombre</label> <input name="nombre" type="text" placeholder="Nombre" class="form-control"></div>
-                                <div class="form-group"><label>Apellido</label> <input name="apellido" type="text" placeholder="Apellido" class="form-control"></div>
-                                <div class="form-group"><label>Usuario</label> <input name="usuario" type="text" placeholder="@usuario" class="form-control"></div>
-                                <div class="form-group"><label>Clave</label> <input name="clave" type="password" placeholder="Clave" class="form-control"></div>    
-                                <div class="form-group"><label>Confirmar clave</label> <input name="clave_v" type="password" placeholder="Clave" class="form-control"></div>      
+                                <div class="form-group"><label>Nombre</label> <input  autocomplete="off" name="nombre" type="text" placeholder="Nombre" class="form-control"></div>
+                                <div class="form-group"><label>Apellido</label> <input  autocomplete="off" name="apellido" type="text" placeholder="Apellido" class="form-control"></div>
+                                <div class="form-group"><label>Usuario</label> <input  autocomplete="off" name="usuario" type="text" placeholder="@usuario" class="form-control"></div>
+                                <div class="form-group"><label>Clave</label> <input  autocomplete="off" name="clave" type="password" placeholder="Clave" class="form-control"></div>    
+                                <div class="form-group"><label>Confirmar clave</label> <input  autocomplete="off" name="clave_v" type="password" placeholder="Clave" class="form-control"></div>
+                                <div class="form-group"><label>Aplica visita?</label>
+                                    <select class="form-control m-b" name="permiso">
+                                        <option value="1">Soporte</option>
+                                        <option value="0">Recepción</option>
+                                    </select>
+                                </div>      
                                 <input class="btn btn-primary" type="submit" value="Guardar Usuario" name="guardar">
                        
                             </form>
@@ -160,9 +166,27 @@
                                                         <div class="form-group"><label>Nombre</label> <input name="nombre" type="text" placeholder="Nombre" class="form-control" value="<?php echo $row['nombre']; ?>"></div>
                                                         <div class="form-group"><label>Apellido</label> <input name="apellido" type="text" placeholder="Apellido" class="form-control" value="<?php echo $row['apellido']; ?>"></div>
                                                         <div class="form-group"><label>Usuario</label> <input disabled name="usuario" type="text" placeholder="@usuario" class="form-control" value="<?php echo $row['usuario']; ?>"></div>
-                                                        <div class="form-group"><label>Clave</label> <input name="clave" type="password" placeholder="Clave" class="form-control"></div>
+                                                        <div class="form-group"><label>Clave</label> <input autocomplete="off" name="clave" type="password" placeholder="Clave"  class="form-control"></div>
                                                         <div class="form-group"><label>Confirmar clave</label> <input name="clave_v" type="password" placeholder="Clave" class="form-control"></div>                                        
-    
+                                                        <div class="form-group"><label>Aplica visita?</label>
+                                                        <select class="form-control m-b" name="permiso">
+                                                            <?php
+                                                                if( $row['permiso']==1){
+                                                                    ?>
+                                                                    <option selected value="1">Soporte</option>
+                                                                    <option value="0">Recepción</option>
+                                                                <?php
+                                                                }else{
+                                                                    ?>
+                                                                        <option value="1">Soporte</option>
+                                                                        <option selected value="0">Recepción</option>
+                                                                    <?php
+                                                                }
+                                                            ?>
+                                                           
+                                                            
+                                                        </select>
+                                                    </div>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <input type="hidden" name="id" value="<?php echo $row['usuario_id']; ?>">
