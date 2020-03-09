@@ -1,9 +1,9 @@
         <div class="footer">
             <div class="pull-right">
-                10GB of <strong>250GB</strong> Free.
+                Desarrollado por Alexander Sánchez
             </div>
             <div>
-                <strong>Copyright</strong> Example Company &copy; 2014-2019
+                <strong>Copyright</strong> Yoya Nicaragua 2020
             </div>
         </div>
 

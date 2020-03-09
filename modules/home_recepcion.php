@@ -28,12 +28,12 @@
                 
                         while($row = mysqli_fetch_array($res)){
                         ?>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3" style="margin: 10px">
                         
                         
                             <form action="modules/regGestionesClientes.php" method="POST">
                                 <input type="hidden"  name="gestion" value="<?php echo $row['gestion_id']; ?>">
-                                <input type="submit" class="btn btn-success btn-rounded btn-block" name="generar" value="<?php echo $row['nombre_gestion']; ?>">
+                                <input type="submit" style="height: 60px" class="btn btn-success btn-rounded btn-block" name="generar" value="<?php echo $row['nombre_gestion']; ?>">
                             </form>
                         </div>
                     <?php

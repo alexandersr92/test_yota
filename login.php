@@ -44,7 +44,8 @@
             }
             ?>
    
-            <h3>YOTA NICARAGUA</h3>
+            
+            <img src="img/logo.png" alt="">
             <p>Sistema de registro de casos
             </p>
             <p>Inicie sesión con su usuario asignado</p>

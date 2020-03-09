@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 08-03-2020 a las 05:50:56
+-- Tiempo de generación: 09-03-2020 a las 05:51:16
 -- Versión del servidor: 5.7.29-log
 -- Versión de PHP: 7.3.1
 
@@ -51,7 +51,23 @@ CREATE TABLE IF NOT EXISTS `gestiones` (
   `usuario_id` int(11) NOT NULL,
   `fecha_creacion` date NOT NULL,
   PRIMARY KEY (`gestion_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `gestiones`
+--
+
+INSERT INTO `gestiones` (`gestion_id`, `nombre_gestion`, `visita`, `usuario_id`, `fecha_creacion`) VALUES
+(1, 'ARREGLO DE PAGO', 0, 1, '2020-03-08'),
+(2, 'CANCELACIÃ“N', 0, 1, '2020-03-08'),
+(3, 'COMPRA', 0, 1, '2020-03-08'),
+(4, 'NUEVO SERVICIO', 0, 1, '2020-03-08'),
+(5, 'RECLAMO', 0, 1, '2020-03-08'),
+(6, 'RENOVACIÃ“N', 0, 1, '2020-03-08'),
+(7, 'SOPORTE TÃ‰CNICO', 1, 1, '2020-03-08'),
+(8, 'DEVOLUCIÃ“N', 0, 1, '2020-03-08'),
+(9, 'CONSULTA', 0, 1, '2020-03-08'),
+(10, 'REEMPLAZO', 0, 1, '2020-03-08');
 
 -- --------------------------------------------------------
 
@@ -96,7 +112,6 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 
 INSERT INTO `usuarios` (`usuario_id`, `usuario`, `clave`, `nombre`, `apellido`, `permiso`) VALUES
 (1, 'asanchez', '$2y$15$H7KL0mCl12OwoViDjXz7m.z5bmDDQ0/INHMjTHDsmjS0eKy4xdzE6', 'Alexander', 'Sanchez', 1),
-(5, 'jmendoza', '$2y$15$YlfaoowDCJ3DLiWgK14gpehSGpDU7lGiAP2H5QQjQWFog9asdum4e', 'Juan', 'Mendoza', 0),
 (6, 'jcenteno', '$2y$15$6gx5FF6zEZoEfwEgJq5wHuo5UXTFyv0zFAk8JqUFVrHeu20mr57yS', 'Juan', 'Centeno', 0);
 COMMIT;
 
